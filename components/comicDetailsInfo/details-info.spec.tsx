@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { comic } from "dh-marvel/test/mocks/comic";
-import ComicDetailsInfo from "./comic-details-info.component";
+import ComicDetailsInfo from "./details-info.component";
 
 describe("ComicDetailsInfo", () => {
   it("should render the component", () => {

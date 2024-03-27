@@ -2,8 +2,8 @@ import { createMocks } from "node-mocks-http";
 import handleCheckout, {
   invalidAddress,
   validCard,
-  withoutAuthorizationCard,
-  withoutFundsCard,
+  withoutAuthorization,
+  withoutFunds,
 } from "dh-marvel/pages/api/checkout/index.route";
 import {
   ERROR_CARD_DATA_INCORRECT,
@@ -79,7 +79,7 @@ describe("Checkout", () => {
         method: "POST",
         body: {
           personalData: { direccion: {} },
-          paymentData: { number: withoutFundsCard },
+          paymentData: { number: withoutFunds },
         } as ICheckout,
       });
       await handleCheckout(req, res);
@@ -95,7 +95,7 @@ describe("Checkout", () => {
         method: "POST",
         body: {
           personalData: { direccion: {} },
-          paymentData: { number: withoutAuthorizationCard },
+          paymentData: { number: withoutAuthorization },
         } as ICheckout,
       });
       await handleCheckout(req, res);

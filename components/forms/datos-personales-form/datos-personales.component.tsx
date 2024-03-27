@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { FormProvider, useForm } from "react-hook-form";
 import { IPersonalData } from "types/ICheckout.type";
 import { schema } from "./schema";
-import StepperButtons from "../stepper-buttons.component";
+import StepperButtons from "../step-controls.component";
 import TextFieldInput from "../text-fiel-input/text-field-input.component";
 
 interface Props {
@@ -63,7 +63,7 @@ const DatosPersonalesForm: FC<Props> = ({
       <StepperButtons
         activeStep={activeStep}
         handleNext={handleSubmit(onSubmit)}
-        handleBack={() => {}}
+        handleBack={() => { }}
       />
     </Stack>
   );

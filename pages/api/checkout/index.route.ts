@@ -10,18 +10,18 @@ import {
 import { ICheckout } from "types/ICheckout.type";
 
 export const invalidAddress = "invalid";
-export const validCard = "4242424242424242";
-export const withoutFundsCard = "4111411141114111";
-export const withoutAuthorizationCard = "4000400040004000";
+export const validCard = "4000400040004000";
+export const withoutFunds = "6000600060006000";
+export const withoutAuthorization = "2000200020002000";
 
 type Data =
   | {
-      data: any;
-    }
+    data: any;
+  }
   | {
-      error: string;
-      message: string;
-    };
+    error: string;
+    message: string;
+  };
 
 export default function handler(
   req: NextApiRequest,
@@ -37,11 +37,11 @@ export default function handler(
       res.status(400).json(ERROR_INCORRECT_ADDRESS);
       return;
     }
-    if (body.paymentData.number === withoutFundsCard) {
+    if (body.paymentData.number === withoutFunds) {
       res.status(400).json(ERROR_CARD_WITHOUT_FUNDS);
       return;
     }
-    if (body.paymentData.number === withoutAuthorizationCard) {
+    if (body.paymentData.number === withoutAuthorization) {
       res.status(400).json(ERROR_CARD_WITHOUT_AUTHORIZATION);
       return;
     }

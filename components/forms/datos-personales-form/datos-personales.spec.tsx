@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import DatosPersonalesForm from "./datos-personales-form.component";
+import DatosPersonalesForm from "./datos-personales.component";
 import userEvent from "@testing-library/user-event";
 
 const defaultData = {

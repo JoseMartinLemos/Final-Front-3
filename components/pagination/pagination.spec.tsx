@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import ComicsPagination from "./comics-pagination.component";
+import ComicsPagination from "./pagination.component";
 
 describe("Pagination component", () => {
   describe("when rendering default component", () => {
     it("should render the first and last numbers", () => {
-      render(<ComicsPagination pagesQuantity={5} setCurrentPage={() => {}} />);
+      render(<ComicsPagination pagesQuantity={5} setCurrentPage={() => { }} />);
       const firstPage = screen.getByLabelText("page 1");
       const lastPage = screen.getByLabelText("Go to page 5");
 
@@ -14,7 +14,7 @@ describe("Pagination component", () => {
     });
 
     it("should render the button next and prev", () => {
-      render(<ComicsPagination pagesQuantity={5} setCurrentPage={() => {}} />);
+      render(<ComicsPagination pagesQuantity={5} setCurrentPage={() => { }} />);
       const buttonPrevPage = screen.getByLabelText("Go to previous page");
       const buttonNextPage = screen.getByLabelText("Go to next page");
 
@@ -25,7 +25,7 @@ describe("Pagination component", () => {
 
   describe("when the user clicks on a page", () => {
     it("should change the current page", async () => {
-      render(<ComicsPagination pagesQuantity={5} setCurrentPage={() => {}} />);
+      render(<ComicsPagination pagesQuantity={5} setCurrentPage={() => { }} />);
       const lastPage = screen.getByLabelText("Go to page 5");
 
       expect(await screen.findByLabelText("page 1")).toBeInTheDocument();

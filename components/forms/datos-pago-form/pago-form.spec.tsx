@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import PaymentForm from "./datos-pago-form.component";
+import PaymentForm from "./pago-form.component";
 
 describe("PaymentForm", () => {
   it("should render without errors", () => {
@@ -13,8 +13,8 @@ describe("PaymentForm", () => {
           cvc: "",
         }}
         activeStep={1}
-        handleSubmitPayment={() => {}}
-        handleBack={() => {}}
+        handleSubmitPayment={() => { }}
+        handleBack={() => { }}
       />
     );
     expect(screen.getByLabelText("Número de tarjeta")).toBeInTheDocument();
@@ -32,8 +32,8 @@ describe("PaymentForm", () => {
           cvc: "",
         }}
         activeStep={1}
-        handleSubmitPayment={() => {}}
-        handleBack={() => {}}
+        handleSubmitPayment={() => { }}
+        handleBack={() => { }}
       />
     );
     const numberInput = screen.getByLabelText(

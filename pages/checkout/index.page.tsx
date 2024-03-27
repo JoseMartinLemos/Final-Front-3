@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
-import CardComicCheckout from "dh-marvel/components/checkout/checkout-card-comic.component";
-import StepperForm from "dh-marvel/components/forms/stepper-form.component";
+import CardCheckout from "dh-marvel/components/checkout/checkout-card.component";
+import StepperForm from "dh-marvel/components/forms/form-steps.component";
 import LayoutCheckout from "dh-marvel/components/layouts/layout-checkout";
 import Loader from "dh-marvel/components/loader/loader-component";
 import { getComicById } from "dh-marvel/services/comics/comics.service";
@@ -20,7 +20,7 @@ const CheckoutPage: NextPage = () => {
     const id = Number(comicId);
     if (comicId) {
       getComicById(id).then((comic) => setComicData(comic));
-    }else{
+    } else {
       router.push('/')
     }
   }, [comicId, router]);
@@ -57,7 +57,7 @@ const CheckoutPage: NextPage = () => {
             <StepperForm comic={comicData} />
           </Box>
           <Box>
-            <CardComicCheckout comic={comicData} />
+            <CardCheckout comic={comicData} />
           </Box>
         </Stack>
       </Box>

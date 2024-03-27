@@ -8,10 +8,10 @@ interface Props {
   comic: IComic;
 }
 
-const BuyNowButton: FC<Props> = ({ comic }) => {
+const BuyNow: FC<Props> = ({ comic }) => {
   const router = useRouter();
 
-  const handleBuyNow = async (comicId: number) => {
+  const handleBuy = async (comicId: number) => {
     const comicResponse = await getComicById(comicId);
 
     if (comicResponse.stock === 0) {
@@ -27,12 +27,12 @@ const BuyNowButton: FC<Props> = ({ comic }) => {
         variant="outlined"
         color="primary"
         data-testid="buy-now-button"
-        onClick={() => handleBuyNow(comic.id)}
+        onClick={() => handleBuy(comic.id)}
       >
-        Compra en 1 click
+        Compra Ahora
       </Button>
     </Box>
   );
 };
 
-export default BuyNowButton;
+export default BuyNow;

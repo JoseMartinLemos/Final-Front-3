@@ -6,7 +6,7 @@ interface Props {
   comic: IComic;
 }
 
-const CardComicCheckout: FC<Props> = ({ comic }) => {
+const CardCheckout: FC<Props> = ({ comic }) => {
   return (
     <Box maxWidth={"500px"}>
       <Box
@@ -71,4 +71,4 @@ const CardComicCheckout: FC<Props> = ({ comic }) => {
   );
 };
 
-export default CardComicCheckout;
+export default CardCheckout;

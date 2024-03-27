@@ -3,7 +3,7 @@ import { comic } from "dh-marvel/test/mocks/comic";
 import { FormProvider, useForm } from "react-hook-form";
 import { FC, PropsWithChildren } from "react";
 import { ICheckout } from "types/ICheckout.type";
-import StepperForm from "./stepper-form.component";
+import StepperForm from "./form-steps.component";
 
 describe("StepperForm component", () => {
   const steps = ["Datos Personales", "Dirección de entrega", "Datos del pago"];
@@ -48,5 +48,5 @@ describe("StepperForm component", () => {
     });
   });
 
-  
+
 });

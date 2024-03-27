@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { getComicsPaginated } from "dh-marvel/services/comics/comics.service";
 import { getComics } from "dh-marvel/services/marvel/marvel.service";
 import ComicsLayout from "dh-marvel/components/layouts/comics/comics-layout.component";
-import ComicsPagination from "dh-marvel/components/pagination/comics-pagination.component";
+import ComicsPagination from "dh-marvel/components/pagination/pagination.component";
 import { IComicResponse } from "types/IComic.type";
 import { Typography } from "@mui/material";
 import Loader from "dh-marvel/components/loader/loader-component";

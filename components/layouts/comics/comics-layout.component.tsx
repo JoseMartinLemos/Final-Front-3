@@ -8,7 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import BuyNowButton from "dh-marvel/components/buyNowButton/buy-now-buttons.component";
+import BuyNow from "dh-marvel/components/buyNowButton/buy-now-buttons.component";
 import { NextPage } from "next";
 import NextLink from "next/link";
 import { IComic } from "types/IComic.type";
@@ -83,7 +83,7 @@ const ComicsLayout: NextPage<ComicsLayoutProps> = ({ comics }) => {
                   </Button>
                 </NextLink>
               </Box>
-              <BuyNowButton comic={comic} />
+              <BuyNow comic={comic} />
             </CardActions>
           </Card>
         </Grid>

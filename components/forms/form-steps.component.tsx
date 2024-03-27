@@ -8,9 +8,9 @@ import {
 } from "types/ICheckout.type";
 
 import { IComic } from "types/IComic.type";
-import DatosPersonalesForm from "./datos-personales-form/datos-personales-form.component";
+import DatosPersonalesForm from "./datos-personales-form/datos-personales.component";
 import DireccionForm from "./direccion-form/direccion-form.component";
-import PaymentForm from "./datos-pago-form/datos-pago-form.component";
+import PaymentForm from "./datos-pago-form/pago-form.component";
 import { useRouter } from "next/router";
 import { checkoutForm } from "dh-marvel/services/checkout/checkout.service";
 import { Snackbar } from "@mui/material";
@@ -116,7 +116,7 @@ const StepperForm: FC<Props> = ({ comic }) => {
   };
 
   return (
-    <Box sx={{ width: "100%"}}>
+    <Box sx={{ width: "100%" }}>
       <Stepper alternativeLabel activeStep={activeStep}>
         {steps.map((label, index) => (
           <Step key={label}>

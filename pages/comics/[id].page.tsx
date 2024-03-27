@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { IComic, IComicResponse } from "types/IComic.type";
 import Loader from "dh-marvel/components/loader/loader-component";
 import NextLink from "next/link";
-import ComicDetailsInfo from "dh-marvel/components/comicDetailsInfo/comic-details-info.component";
+import ComicDetailsInfo from "dh-marvel/components/comicDetailsInfo/details-info.component";
 import LayoutGeneral from "dh-marvel/components/layouts/layout-general";
 
 interface Props {

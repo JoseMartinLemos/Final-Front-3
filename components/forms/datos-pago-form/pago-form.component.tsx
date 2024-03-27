@@ -5,7 +5,7 @@ import { IPaymentData } from "types/ICheckout.type";
 import { paymentSchema } from "./schema";
 import { Box, Stack } from "@mui/material";
 import TextFieldInput from "../text-fiel-input/text-field-input.component";
-import StepperButtons from "../stepper-buttons.component";
+import StepperButtons from "../step-controls.component";
 import { FC, useEffect, useState } from "react";
 import Cards from "react-credit-cards";
 
